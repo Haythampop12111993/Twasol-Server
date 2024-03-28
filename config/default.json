@@ -1,0 +1,6 @@
+{
+  "port": 5000,
+  "db": "mongodb+srv://admin:admin00@twasol.hs9kqqf.mongodb.net/?retryWrites=true&w=majority",
+  "jwtPrivateKey": "secret",
+  "localUrl": "http://localhost:5000"
+}
