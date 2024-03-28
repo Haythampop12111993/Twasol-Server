@@ -408,7 +408,7 @@ class ProfileController {
       }
       profile.image = newName;
       profile.image =
-        config.get("localUrl") +
+        config.get("serverUrl") +
         newName.replace("public", "").replace("\\", "/");
       await profile.save();
       return resGenerator(res, 200, true, "Profile updated", profile);
