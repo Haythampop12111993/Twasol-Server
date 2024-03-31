@@ -5,7 +5,17 @@ const path = require("path");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "http://localhost:5000",
+      "http://localhost:4200",
+      "https://gorgeous-gold-turtleneck.cyclic.app",
+    ],
+    credentials: true,
+  })
+);
 const userRoute = require("./routes/userRoute");
 const profileRoute = require("./routes/profileRoute");
 const postRoute = require("./routes/postRoute");
