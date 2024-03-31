@@ -7,12 +7,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "http://localhost:5000",
-      "http://localhost:4200",
-      "https://gorgeous-gold-turtleneck.cyclic.app",
-    ],
+    origin: ["*"],
     credentials: true,
   })
 );
