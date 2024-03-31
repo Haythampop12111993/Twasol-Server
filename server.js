@@ -11,6 +11,7 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   next();
 });
+app.use(cors());
 const userRoute = require("./routes/userRoute");
 const profileRoute = require("./routes/profileRoute");
 const postRoute = require("./routes/postRoute");
