@@ -7,10 +7,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: ["http://localhost:4200"],
+    origin: "http://localhost:4200", // Replace with your allowed origin
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"], // Specify the methods you want to allow
-    allowedHeaders: ["Content-Type", "Authorization"], // Specify the headers you want to allow
+    methods: "*",
+    allowedHeaders: "*",
   })
 );
 const userRoute = require("./routes/userRoute");
