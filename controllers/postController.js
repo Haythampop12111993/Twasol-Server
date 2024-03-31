@@ -208,7 +208,7 @@ class postController {
         user: req.user._id,
         text: req.body.text,
         name: req.user.name,
-        image: userProfile.image,
+        image: userProfile.image || "assets/default.png",
       });
       await post.save();
       return resGenerator(res, 201, true, "Comment added", post);
