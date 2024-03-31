@@ -14,7 +14,6 @@ app.use(
       "https://gorgeous-gold-turtleneck.cyclic.app",
     ],
     credentials: true,
-    Ac,
   })
 );
 const userRoute = require("./routes/userRoute");
