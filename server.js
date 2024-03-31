@@ -5,13 +5,7 @@ const path = require("path");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(
-  cors({
-    // origin: "http://localhost:4200",
-    // credentials: true, // allow session cookies from browser to back-end server,
-    // optionSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204,
-  })
-);
+app.use(cors());
 const userRoute = require("./routes/userRoute");
 const profileRoute = require("./routes/profileRoute");
 const postRoute = require("./routes/postRoute");
